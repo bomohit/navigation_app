@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "588740840378",
+    "project_id": "msu-navigation",
+    "storage_bucket": "msu-navigation.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:588740840378:android:1e5531e7e15f4e05f9ab83",
+        "android_client_info": {
+          "package_name": "com.example.navigation_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "588740840378-jjaf15p9urclavcc92q2gt3nassdjsss.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABtwCTVAJsGvweg0ib8YpXDkdSuNzwFQs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "588740840378-jjaf15p9urclavcc92q2gt3nassdjsss.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
