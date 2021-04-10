@@ -1,6 +1,7 @@
 package com.example.navigation_app.ui.home
 
 import android.os.Bundle
+import android.util.Log.d
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.navigation_app.R
+import com.example.navigation_app.viewmodel.loginViewModel
 
 class HomeFragment : Fragment() {
 
@@ -26,6 +28,10 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
+
+        var viewModel = ViewModelProvider(requireActivity()).get(loginViewModel::class.java)
+        d("bomoh", viewModel.id.toString()+"home")
+
         return root
     }
 }
