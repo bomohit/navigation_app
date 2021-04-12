@@ -15,9 +15,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val username = intent.getStringExtra("username").toString()
 
         var viewModel = ViewModelProvider(this).get(loginViewModel::class.java)
-        viewModel.id = "bomohit"
+//        viewModel.id = "bomohit"
+        viewModel.id = username
 
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 

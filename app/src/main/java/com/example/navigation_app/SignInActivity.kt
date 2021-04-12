@@ -36,6 +36,7 @@ class SignInActivity : AppCompatActivity() {
                             val pass = it.getField<String>("password").toString()
                             if (pass == password.text.toString()) {
                                 val intent = Intent(this, MainActivity::class.java)
+                                intent.putExtra("username", username.text.toString())
                                 startActivity(intent)
                                 finish()
                             }
