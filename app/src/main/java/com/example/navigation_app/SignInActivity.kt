@@ -3,6 +3,7 @@ package com.example.navigation_app
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log.d
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
@@ -27,14 +28,17 @@ class SignInActivity : AppCompatActivity() {
         val lay: ConstraintLayout = findViewById(R.id.layoutsignin)
 
         buttonSignin.setOnClickListener {
+            d("bomoh", "signin pressed")
             if (valid()) {
                 db.collection("user").document(username.text.toString())
                     .get()
                     .addOnSuccessListener {
+                        d("bomoh", "success")
                         val uid = it.getField<String>("username").toString()
                         if (uid == username.text.toString()) {
                             val pass = it.getField<String>("password").toString()
                             if (pass == password.text.toString()) {
+                                d("bomoh", "start")
                                 val intent = Intent(this, MainActivity::class.java)
                                 intent.putExtra("username", username.text.toString())
                                 startActivity(intent)
