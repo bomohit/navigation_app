@@ -16,7 +16,18 @@
         app:layout_constraintBottom_toTopOf="@+id/textView8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/photo_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/nav_main" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/textView8"
@@ -26,11 +37,11 @@
         android:text="From"
         android:textColor="#FFFFFF"
         android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/spinner"
-        app:layout_constraintStart_toStartOf="@+id/spinner" />
+        app:layout_constraintBottom_toTopOf="@+id/spinner_from"
+        app:layout_constraintStart_toStartOf="@+id/spinner_from" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinner_from"
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:layout_marginStart="32dp"
@@ -50,8 +61,8 @@
         android:text="Destination"
         android:textColor="#FFFFFF"
         android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/spinner2"
-        app:layout_constraintStart_toStartOf="@+id/spinner" />
+        app:layout_constraintBottom_toTopOf="@+id/spinner_to"
+        app:layout_constraintStart_toStartOf="@+id/spinner_from" />
 
     <Button
         android:id="@+id/button"
@@ -68,13 +79,13 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/spinner_to"
         android:layout_width="0dp"
         android:layout_height="35dp"
         android:layout_marginBottom="50dp"
         android:background="@drawable/text_background"
         app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="@+id/spinner"
-        app:layout_constraintStart_toStartOf="@+id/spinner" />
+        app:layout_constraintEnd_toEndOf="@+id/spinner_from"
+        app:layout_constraintStart_toStartOf="@+id/spinner_from" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
