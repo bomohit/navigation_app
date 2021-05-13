@@ -22,4 +22,9 @@
         android:name="com.example.navigation_app.ui.notifications.TimeTableFragment"
         android:label="@string/title_timetable"
         tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_feedback"
+        android:name="com.example.navigation_app.FeedbackFragment"
+        android:label="@string/title_feedback"
+        tools:layout="@layout/fragment_feedback" />
 </navigation>
