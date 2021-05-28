@@ -80,8 +80,6 @@ class TimeTableFragment : Fragment(), AdapterView.OnItemSelectedListener {
                     }
                     rv()
                 }
-
-
         }
     }
 

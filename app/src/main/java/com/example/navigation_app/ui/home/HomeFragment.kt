@@ -5,10 +5,7 @@ import android.util.Log.d
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Spinner
-import android.widget.TextView
+import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -72,6 +69,8 @@ class HomeFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
         val photoView : PhotoView = requireView().findViewById(R.id.photo_view)
+        val photoGui : ImageView = requireView().findViewById(R.id.photo_gui)
+
         // check which spinner selected
         if (parent!!.id.toString() == spinner_from_id) {
             select_from = position
@@ -85,8 +84,10 @@ class HomeFragment : Fragment(), AdapterView.OnItemSelectedListener {
             d("bomoh", "selection satisfied")
             val nav = "nav_${select_from}_${select_to}"
             val id = resources.getIdentifier(nav, "drawable", requireActivity().packageName)
-
+            val gui_nav = "gui_${select_from}_${select_to}"
+            val gui_id = resources.getIdentifier(gui_nav, "drawable", requireActivity().packageName)
             photoView.setImageResource(id)
+            photoGui.setImageResource(gui_id)
         }
     }
 
