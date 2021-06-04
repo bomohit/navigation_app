@@ -2,7 +2,7 @@
     <string name="app_name">Navigation_App</string>
     <string name="title_home">Home</string>
     <string name="title_profile">Profile</string>
-    <string name="title_timetable">TimeTable</string>
+    <string name="title_timetable">Reminder</string>
     <string name="title_feedback">Feedback</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
